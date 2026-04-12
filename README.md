@@ -12,7 +12,9 @@ Here, I will be writing and storing all my code related to various DSA problems,
 
 As I learn and practice, I will be pushing code related to various topics, starting from basic operations to complex data structures and algorithms. 
 
-* **Currently included:** Basic algorithmic implementations (e.g., `isPrime.java`).
+* **Currently included:**
+  * `basics/`: Basic algorithmic implementations and fundamentals (e.g., `isPrime.java`).
+  * `patterns/`: Various pattern printing problems.
 * **Upcoming topics:** Arrays, Strings, Linked Lists, Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
 
 ## 🚀 Getting Started
@@ -28,8 +30,9 @@ If you want to run any of the Java files locally:
    ```bash
    cd dsa-in-java
    ```
-4. Compile any Java file (for example, `isPrime.java`):
+4. Compile any Java file (for example, `isPrime.java` from the `basics` folder):
    ```bash
+   cd basics
    javac isPrime.java
    ```
 5. Run the compiled class:
