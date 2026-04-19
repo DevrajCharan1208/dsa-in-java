@@ -22,7 +22,7 @@ public class Pattern10{
             }
             System.out.println("");
         }
-        for(int i=1; i<=n;i++){
+        for(int i=1; i<=n;i++){ // or just run the previous loop with (int i=n;i>=1;i--)
             for(int j=1;j<=n*2;j++){
                 if(j>n-i+1&&j<n+i){
                     System.out.print(" ");
