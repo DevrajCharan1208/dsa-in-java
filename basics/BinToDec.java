@@ -1,7 +1,7 @@
 // Binary to Decimal
 import java.util.*;
 
-public class binToDec{
+public class BinToDec{
 
     static int binToDec(int binaryNum){
 

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class binomialCoefficient{
+public class BinomialCoefficient{
 
     static int factorial(int n){
     int fact = 1;

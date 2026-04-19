@@ -7,7 +7,7 @@ Floyd's Trianlge
 11 12 13 14 15
 */
 
-public class pattern_8{
+public class Pattern8{
 
     static void floyds_triangle(int n){
 

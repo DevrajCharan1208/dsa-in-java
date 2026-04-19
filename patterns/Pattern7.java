@@ -6,7 +6,7 @@ Inverted Half Pyramid with Number
 12
 1 
 */
-public class pattern_7{
+public class Pattern7{
 
     static void inverted_half_pyramid_num(int n){
 

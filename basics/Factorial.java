@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class factorial{
+public class Factorial{
 
 static int factorial(int n){
     int fact = 1;

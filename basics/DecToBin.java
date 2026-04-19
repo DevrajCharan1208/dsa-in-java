@@ -1,7 +1,7 @@
 // Decimal to Binary
 import java.util.*;
 
-public class decToBin{
+public class DecToBin{
 
     static int decToBin(int decimalNum){
 

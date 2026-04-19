@@ -6,7 +6,7 @@ Inverted & Rotated Half-Pyramid
 ****
 */ 
 
-public class pattern_6{
+public class Pattern6{
     public static void main (String args[]){
 
         //1.) Using Nested loop

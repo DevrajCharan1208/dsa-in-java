@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-class isPrime{
+class IsPrime{
 
     static boolean checkPrime( int n){
         if (n==0 || n ==1){
