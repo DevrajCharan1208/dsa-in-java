@@ -15,7 +15,8 @@ As I learn and practice, I will be pushing code related to various topics, start
 * **Currently included:**
   * `basics/`: Basic algorithmic implementations and fundamentals (e.g., `isPrime.java`).
   * `patterns/`: Various pattern printing problems.
-* **Upcoming topics:** Arrays, Strings, Linked Lists, Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
+  * `Arrays/`: Core array operations and algorithms (Linear Search, Binary Search, etc.).
+* **Upcoming topics:** Strings, Linked Lists, Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
 
 ## 🚀 Getting Started
 
