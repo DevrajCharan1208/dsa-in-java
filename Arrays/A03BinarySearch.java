@@ -9,9 +9,9 @@ public class A03BinarySearch{
         while(start<=end){
             mid = (start+end)/2;
             if(key > a[mid]){
-                start = mid;
+                start = mid + 1;
             }else if(key < a[mid]){
-                end = mid;
+                end = mid - 1;
             }else{
                 return mid;
             }
