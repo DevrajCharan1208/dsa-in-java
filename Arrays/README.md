@@ -18,4 +18,3 @@ Here are the array problems and operations implemented in this folder:
 | 8 | **Max Subarray Sum (Prefix Sum)** | Optimised approach using a prefix sum array to compute subarray sums in O(1) each — O(n²) overall. | [`A08MaxSubarrayPrefix.java`](A08MaxSubarrayPrefix.java) |
 | 9 | **Max Subarray Sum (Kadane's Algorithm)** | Most efficient approach using Kadane's Algorithm to find the maximum subarray sum in a single pass — O(n). | [`A09MaxSubarraySumKodane.java`](A09MaxSubarraySumKodane.java) |
 
-> **Tip:** The Max Subarray Sum problem is a great study in algorithm optimisation — compare the three approaches (Brute Force → Prefix Sum → Kadane's) to see how time complexity improves from O(n³) to O(n)!
