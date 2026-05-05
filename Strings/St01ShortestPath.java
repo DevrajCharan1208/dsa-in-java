@@ -1,6 +1,6 @@
 //A string of directions is given 'ex: "WNEENESENNN"', find shortest distance after moving 1 unit in the given direcetions
 
-public class S01ShortestPath{
+public class St01ShortestPath{
 
     public static float shortestPath(String str){
         int n = str.length();

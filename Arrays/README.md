@@ -29,4 +29,5 @@ Here are the array problems and operations implemented in this folder:
 | 12 | **Spiral Matrix** | Printing all elements of a 2D matrix in spiral order using boundary pointers — O(m×n). | [`A12SpiralMatrix.java`](A12SpiralMatrix.java) |
 | 13 | **Diagonal Sum (Brute Force)** | Computing sum of both diagonals of a square matrix using two nested loops — O(n²). | [`A13DiagnolSumBrute.java`](A13DiagnolSumBrute.java) |
 | 14 | **Diagonal Sum (Optimized)** | Computing diagonal sum in a single loop pass, avoiding double-counting the centre element — O(n). | [`A14DiagnolSumOptimized.java`](A14DiagnolSumOptimized.java) |
+| 15 | **Search in Sorted Matrix** | Searching for a key in a row-wise and column-wise sorted matrix by starting from the top-right corner — O(n+m). | [`A15SearchSortedMatrix.java`](A15SearchSortedMatrix.java) |
 

@@ -1,4 +1,4 @@
-public class S02Substring{
+public class St02Substring{
 
     public static String subString(String str, int si, int ei){
         String subStr = "";
