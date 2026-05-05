@@ -6,6 +6,8 @@ This directory contains solutions and implementations related to the Array data 
 
 Here are the array problems and operations implemented in this folder:
 
+### 1D Arrays
+
 | No. | Problem | Description | Solution Link |
 |---|---|---|---|
 | 1 | **Linear Search** | Finding an element in an array sequentially. | [`A01LinearSearch.java`](A01LinearSearch.java) |
@@ -14,7 +16,17 @@ Here are the array problems and operations implemented in this folder:
 | 4 | **Reverse Array** | Reversing the elements of an array in-place. | [`A04ReverseArray.java`](A04ReverseArray.java) |
 | 5 | **Pairs in Array** | Printing all unique pairs from an array using nested loops (Brute Force). | [`A05PairsInArray.java`](A05PairsInArray.java) |
 | 6 | **Subarrays** | Printing all possible subarrays using three nested loops (Brute Force). | [`A06Subarrays.java`](A06Subarrays.java) |
-| 7 | **Max Subarray Sum (Brute Force)** | Finding the maximum subarray sum by checking all possible subarrays using three nested loops — O(n³). | [`A07MaxSubarrayBrute.java`](A07MaxSubarrayBrute.java) |
-| 8 | **Max Subarray Sum (Prefix Sum)** | Optimised approach using a prefix sum array to compute subarray sums in O(1) each — O(n²) overall. | [`A08MaxSubarrayPrefix.java`](A08MaxSubarrayPrefix.java) |
-| 9 | **Max Subarray Sum (Kadane's Algorithm)** | Most efficient approach using Kadane's Algorithm to find the maximum subarray sum in a single pass — O(n). | [`A09MaxSubarraySumKodane.java`](A09MaxSubarraySumKodane.java) |
+| 7 | **Max Subarray Sum (Brute Force)** | Finding the maximum subarray sum by checking all possible subarrays — O(n³). | [`A07MaxSubarrayBrute.java`](A07MaxSubarrayBrute.java) |
+| 8 | **Max Subarray Sum (Prefix Sum)** | Optimised approach using a prefix sum array to compute subarray sums — O(n²) overall. | [`A08MaxSubarrayPrefix.java`](A08MaxSubarrayPrefix.java) |
+| 9 | **Max Subarray Sum (Kadane's Algorithm)** | Most efficient approach using Kadane's Algorithm in a single pass — O(n). | [`A09MaxSubarraySumKodane.java`](A09MaxSubarraySumKodane.java) |
+| 10 | **Trapping Rainwater** | Calculating total water trapped between bars using left/right max boundary arrays — O(n). | [`A10TrappingRainwater.java`](A10TrappingRainwater.java) |
+| 11 | **Best Time to Buy & Sell Stock** | Finding maximum profit from a single buy-sell transaction using a greedy one-pass approach — O(n). | [`A11BuyAndSellStock.java`](A11BuyAndSellStock.java) |
+
+### 2D Arrays (Matrices)
+
+| No. | Problem | Description | Solution Link |
+|---|---|---|---|
+| 12 | **Spiral Matrix** | Printing all elements of a 2D matrix in spiral order using boundary pointers — O(m×n). | [`A12SpiralMatrix.java`](A12SpiralMatrix.java) |
+| 13 | **Diagonal Sum (Brute Force)** | Computing sum of both diagonals of a square matrix using two nested loops — O(n²). | [`A13DiagnolSumBrute.java`](A13DiagnolSumBrute.java) |
+| 14 | **Diagonal Sum (Optimized)** | Computing diagonal sum in a single loop pass, avoiding double-counting the centre element — O(n). | [`A14DiagnolSumOptimized.java`](A14DiagnolSumOptimized.java) |
 
