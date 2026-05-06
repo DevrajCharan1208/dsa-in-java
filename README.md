@@ -17,7 +17,7 @@ As I learn and practice, I will be pushing code related to various topics, start
   * `patterns/`: Various pattern printing problems.
   * `Arrays/`: Core array operations and algorithms (Linear Search, Binary Search, 2D Matrices, and more).
   * `Sorting/`: Fundamental sorting algorithms (Bubble, Selection, Insertion, Counting Sort).
-  * `Strings/`: String-based problems and algorithms (Shortest Path, Custom Substring).
+  * `Strings/`: String-based problems and algorithms (Shortest Path, Substring, Title Case, String Compression).
 * **Upcoming topics:** Linked Lists, Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
 
 ## 🚀 Getting Started
