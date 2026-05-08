@@ -13,13 +13,14 @@ Here, I will be writing and storing all my code related to various DSA problems,
 As I learn and practice, I will be pushing code related to various topics, starting from basic operations to complex data structures and algorithms. 
 
 * **Currently included:**
-  * `basics/`: Basic algorithmic implementations and fundamentals (e.g., `isPrime.java`).
-  * `patterns/`: Various pattern printing problems.
-  * `Arrays/`: Core array operations and algorithms (Linear Search, Binary Search, 2D Matrices, and more).
-  * `Sorting/`: Fundamental sorting algorithms (Bubble, Selection, Insertion, Counting Sort).
+  * `Basics/`: Basic algorithmic implementations and fundamentals (e.g., `IsPrime.java`).
+  * `Patterns/`: Various pattern printing problems (13 patterns covering loops and logic building).
+  * `Arrays/`: Core array operations and algorithms (Linear Search, Binary Search, Kadane's, 2D Matrices, and more).
   * `Strings/`: String-based problems and algorithms (Shortest Path, Substring, Title Case, String Compression).
+  * `Sorting/`: Fundamental sorting algorithms (Bubble, Selection, Insertion, Counting Sort).
   * `BitManipulation/`: Bitwise operations and tricks (Odd/Even, Get/Set/Clear Bit, Power of Two, Fast Exponentiation).
-* **Upcoming topics:** Linked Lists, Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
+  * `Recursion/`: Recursive problem-solving (Factorial, Fibonacci, Tiling, Friends Pairing, Binary Strings, and more).
+* **Upcoming topics:** Divide & Conquer, Backtracking, Linked Lists, Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
 
 ## 🚀 Getting Started
 
