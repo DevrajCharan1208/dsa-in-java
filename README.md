@@ -20,7 +20,8 @@ As I learn and practice, I will be pushing code related to various topics, start
   * `Sorting/`: Fundamental sorting algorithms (Bubble, Selection, Insertion, Counting Sort).
   * `BitManipulation/`: Bitwise operations and tricks (Odd/Even, Get/Set/Clear Bit, Power of Two, Fast Exponentiation).
   * `Recursion/`: Recursive problem-solving (Factorial, Fibonacci, Tiling, Friends Pairing, Binary Strings, and more).
-* **Upcoming topics:** Divide & Conquer, Backtracking, Linked Lists, Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
+  * `DivideAndConquer/`: Divide and conquer algorithms (Merge Sort, Quick Sort, Sorted & Rotated Array Search).
+* **Upcoming topics:** Backtracking, Linked Lists, Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
 
 ## 🚀 Getting Started
 
