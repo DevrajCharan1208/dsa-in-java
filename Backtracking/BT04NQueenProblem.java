@@ -19,9 +19,9 @@ public class BT04NQueenProblem{
     }
 
     public static void printBoard(char[][] board){
-        for(int i = 0; i<board.length;i++){
-            for(int j = 0; j<board.length;j++){
-                System.out.print(board[i][j]+ " ");
+        for (char[] board1 : board) {
+            for (int j = 0; j<board.length; j++) {
+                System.out.print(board1[j] + " ");
             }
             System.out.println("");
         }
