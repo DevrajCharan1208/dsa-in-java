@@ -11,6 +11,7 @@ This directory contains algorithmic implementations using the Backtracking strat
 | 3 | **String Permutations** | Finding all permutations of a given string — O(n * n!). | [`BT03StringPermutations.java`](BT03StringPermutations.java) |
 | 4 | **N-Queens Problem** | Placing N queens on an N×N chessboard such that no two queens attack each other. Also counts total possible ways. | [`BT04NQueenProblem.java`](BT04NQueenProblem.java) |
 | 5 | **Grid Ways** | Finding the total number of ways to reach from top-left to bottom-right of a grid using recursion/backtracking — O(2^(n+m)). | [`BT05GridWays.java`](BT05GridWays.java) |
+| 6 | **Sudoku Solver** | Solving a 9x9 Sudoku board by trying numbers 1-9 for each empty cell and backtracking if it doesn't lead to a solution. | [`BT06SudokuSolver.java`](BT06SudokuSolver.java) |
 
 ---
 *Explore all paths, but know when to turn back!* 🔙
