@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class AL01WaterContainer {
+public class AL01WaterContainerBruteForce {
 
     public static int maxWater(ArrayList<Integer> arr) {
         int area;
