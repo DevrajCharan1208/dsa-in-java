@@ -12,10 +12,12 @@ public class LinkedList{
 
     public static Node head;
     public static Node tail;
+    public static int size;
 
     public void addFirst(int data){
         //Create new node
         Node newNode = new Node(data);
+        size++;
 
         if(head==null){
             head = tail = newNode;
@@ -33,6 +35,7 @@ public class LinkedList{
 
         //Create new node
         Node newNode = new Node(data);
+        size++;
 
         if(head==null){
             head = tail = newNode;
@@ -58,6 +61,7 @@ public class LinkedList{
 
         //1.Create new Node;
         Node newNode = new Node(data);
+        size++;
 
         //2.new node's next = temp's next, after the while temp will the previous node of index.
         newNode.next = temp.next;
@@ -65,6 +69,13 @@ public class LinkedList{
         //3.temp's next = new node
         temp.next = newNode;
 
+    }
+
+    public int removeLast(){
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
     }
 
     public void printLL(){
@@ -96,6 +107,12 @@ public class LinkedList{
 
         ll.add(6, 5);
         ll.printLL();
+        System.out.println(size);
+
+        ll.removeLast();
+        ll.printLL();
+        System.out.println(size);
+
 
     }
 
