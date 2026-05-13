@@ -22,6 +22,7 @@ As I learn and practice, I will be pushing code related to various topics, start
   * `Recursion/`: Recursive problem-solving (Factorial, Fibonacci, Tiling, Friends Pairing, Binary Strings, and more).
   * `DivideAndConquer/`: Divide and conquer algorithms (Merge Sort, Quick Sort, Sorted & Rotated Array Search).
   * `Backtracking/`: Backtracking algorithms (N-Queens, Grid Ways, Subsets, Permutations, Sudoku Solver).
+  * `ArrayList/`: Problems solved using ArrayLists and Two Pointer approach (Container with Most Water, Pair Sum).
 * **Upcoming topics:** Linked Lists, Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
 
 ## 🚀 Getting Started
