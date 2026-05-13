@@ -47,6 +47,26 @@ public class LinkedList{
         
     }
 
+    public void add(int data,int index){
+        Node temp = head;
+        int i = 0;
+
+        while(i<index-1){
+            temp = temp.next;
+            i++;
+        }
+
+        //1.Create new Node;
+        Node newNode = new Node(data);
+
+        //2.new node's next = temp's next, after the while temp will the previous node of index.
+        newNode.next = temp.next;
+
+        //3.temp's next = new node
+        temp.next = newNode;
+
+    }
+
     public void printLL(){
         Node temp = head;
 
@@ -70,8 +90,12 @@ public class LinkedList{
 
         ll.addLast(3);
         ll.addLast(4);
+        ll.addLast(5);
+        ll.addLast(7);
         ll.printLL();
 
+        ll.add(6, 5);
+        ll.printLL();
 
     }
 
