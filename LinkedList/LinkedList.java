@@ -71,11 +71,42 @@ public class LinkedList{
 
     }
 
-    public int removeLast(){
+    public int removeFirst(){
+        if(size==0){
+            System.out.println("List is Empty.");
+            return Integer.MIN_VALUE;
+        }else if(size==1){
+            int val = head.data;
+            head=tail=null;
+            return val;
+        }
+
         int val = head.data;
         head = head.next;
         size--;
         return val;
+    }
+
+    public int removeLast(){
+        if(size==0){
+            System.out.println("List is Empty.");
+            return Integer.MIN_VALUE;
+        }else if(size==1){
+            int val = head.data;
+            head=tail=null;
+            return val;
+        }
+
+        Node temp = head;
+        for(int i = 0; i<size-2;i++){
+            temp = temp.next;
+        }
+
+        int val = tail.data;
+        temp.next = null;
+        size--;
+        return val;
+        
     }
 
     public void printLL(){
@@ -92,26 +123,47 @@ public class LinkedList{
         System.out.println("null");
     }
 
+    public int search(int key){
+        int idx = 0;
+        Node temp = head;
+        while(temp!=null){
+            if(temp.data==key){
+                return idx;
+            }
+            idx++;
+            temp=temp.next;
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
 
+        //adding element to first
         ll.addFirst(2);
         ll.addFirst(1);
         ll.printLL();
 
+        //adding element to last
         ll.addLast(3);
         ll.addLast(4);
         ll.addLast(5);
         ll.addLast(7);
         ll.printLL();
 
+        //adding element at index 
         ll.add(6, 5);
+        ll.printLL();
+        System.out.println(size);
+
+        ll.removeFirst();
         ll.printLL();
         System.out.println(size);
 
         ll.removeLast();
         ll.printLL();
-        System.out.println(size);
+
+        System.out.println(ll.search(4));
 
 
     }
