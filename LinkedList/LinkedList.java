@@ -157,7 +157,7 @@ public class LinkedList{
         }
 
         prev.next = prev.next.next;
-        return;
+        size--;
     }
 
     //recursion search
