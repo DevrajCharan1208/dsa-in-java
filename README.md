@@ -23,7 +23,7 @@ As I learn and practice, I will be pushing code related to various topics, start
   * `DivideAndConquer/`: Divide and conquer algorithms (Merge Sort, Quick Sort, Sorted & Rotated Array Search).
   * `Backtracking/`: Backtracking algorithms (N-Queens, Grid Ways, Subsets, Permutations, Sudoku Solver).
   * `ArrayList/`: Problems solved using ArrayLists and Two Pointer approach (Container with Most Water, Pair Sum).
-  * `LinkedList/`: Custom Singly Linked List implementation + problems (Palindrome Check, Cycle Detection & Removal, Merge Sort).
+  * `LinkedList/`: Custom Singly & Doubly Linked List implementations + problems (Palindrome, Cycle Detection, ZigZag).
 * **Upcoming topics:** Stacks, Queues, Trees, Graphs, Dynamic Programming, and more!
 
 ## 🚀 Getting Started

@@ -7,8 +7,10 @@ This directory contains a **custom-built Linked List** implementation (without J
 | File | Type | Description |
 |---|---|---|
 | [`LinkedList.java`](LinkedList.java) | **Core Implementation** | Full custom Singly Linked List with all core operations + Merge Sort |
+| [`DoubleLL.java`](DoubleLL.java) | **Core Implementation** | Full custom Doubly Linked List with `prev` + `next` pointers, add/remove/reverse |
 | [`LL01CheckPalindrome.java`](LL01CheckPalindrome.java) | **Problem** | Checks if a linked list is a palindrome |
 | [`LL02DetectAndRemoveCycle.java`](LL02DetectAndRemoveCycle.java) | **Problem** | Detects and removes a cycle using Floyd's Algorithm |
+| [`LL03ZigZagLL.java`](LL03ZigZagLL.java) | **Problem** | Rearranges a linked list into ZigZag order (alternating min-max) |
 
 ---
 
@@ -32,23 +34,38 @@ All operations are built from scratch using a custom `Node` class.
 
 ---
 
+## 🔧 Doubly Linked List — `DoubleLL.java`
+
+Each `Node` has both a `next` and a `prev` pointer, enabling O(1) removal from both ends.
+
+| No. | Operation / Method | Description | Complexity |
+|---|---|---|---|
+| 1 | **`addFirst(data)`** | Insert at head — update `newNode.next = head` and `head.prev = newNode` | O(1) |
+| 2 | **`removeFirst()`** | Remove head — move head forward, set `head.prev = null` | O(1) |
+| 3 | **`removeLast()`** | Remove tail — move tail backward using `tail.prev`, set `tail.next = null` | O(1) |
+| 4 | **`reverse()`** | Swap `next` and `prev` pointers for every node | O(n) |
+| 5 | **`print()`** | Print nodes in `null<->data<->null` format | O(n) |
+
+---
+
 ## 📝 Problem Files
 
 | No. | Problem | Key Technique | Complexity | Solution Link |
 |---|---|---|---|---|
 | 1 | **Check Palindrome** | Find mid (slow/fast pointer) → Reverse 2nd half → Compare both halves | O(n) time, O(1) space | [`LL01CheckPalindrome.java`](LL01CheckPalindrome.java) |
 | 2 | **Detect & Remove Cycle** | Floyd's Cycle Detection (slow/fast pointer) → Reset slow to head and advance both to find cycle start → Remove cycle | O(n) time, O(1) space | [`LL02DetectAndRemoveCycle.java`](LL02DetectAndRemoveCycle.java) |
+| 3 | **ZigZag Linked List** | Find mid → Reverse 2nd half → Alternately merge both halves (1→n→2→n-1→...) | O(n) time, O(1) space | [`LL03ZigZagLL.java`](LL03ZigZagLL.java) |
 
 ---
 
 ## 💡 Why Are Problem Files Self-Contained?
 
-Each problem file (`LL01`, `LL02`) defines its own minimal `LinkedList` / `Node` class instead of importing `LinkedList.java`. This is because:
+Each problem file (`LL01`, `LL02`, `LL03`) defines its own minimal `LinkedList` / `Node` class instead of importing `LinkedList.java`. This is because:
 1. Java doesn't support importing classes from the same directory without packages.
 2. Each file is **independently runnable** — you can compile and test it without any dependencies.
 3. The focus stays on the algorithm, not boilerplate setup.
 
-> 💡 **Key Algorithms Used:** Slow & Fast Pointer (Floyd's Algorithm), In-place Reversal, Merge Sort on Linked List.
+> 💡 **Key Algorithms Used:** Slow & Fast Pointer (Floyd's Algorithm), In-place Reversal, Merge Sort on Linked List, ZigZag Alternate Merge.
 
 ---
 *Linked Lists teach you to think in pointers — master them and recursion becomes second nature!* 🔗
