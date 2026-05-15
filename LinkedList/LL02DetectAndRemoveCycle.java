@@ -1,4 +1,4 @@
-public class LL02DetectCycle{
+public class LL02DetectAndRemoveCycle{
 
     public static class Node{
         @SuppressWarnings("unused")
@@ -39,13 +39,33 @@ public class LL02DetectCycle{
         }
         return false;
     }
+
+    public static void removeCycle(){
+        Node slow = head, fast = head;
+
+        while(fast!=null&&fast.next!=null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(slow==fast){
+                slow = head;
+                Node prev = fast;
+                while(slow!=fast){
+                    slow = slow.next;
+                    prev = fast;
+                    fast = fast.next;
+                }
+                prev.next = null;
+            }
+        }
+    }
     public static void main(String[] args) {
         head = new Node(1);
         head.next = new Node(2);
         head.next.next = new Node(3);
         head.next.next.next = head;
         System.out.println(isCycle());
-
+        removeCycle();
+        System.out.println(isCycle());
     }
 
 }
