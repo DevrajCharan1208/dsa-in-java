@@ -24,7 +24,7 @@ As I learn and practice, I will be pushing code related to various topics, start
   * `Backtracking/`: Backtracking algorithms (N-Queens, Grid Ways, Subsets, Permutations, Sudoku Solver).
   * `ArrayList/`: Problems solved using ArrayLists and Two Pointer approach (Container with Most Water, Pair Sum).
   * `LinkedList/`: Custom Singly & Doubly Linked List implementations + problems (Palindrome, Cycle Detection, ZigZag).
-  * `Stack/`: Custom Stack implementations (ArrayList & LinkedList) + stack algorithms (Push at Bottom, Reverse String).
+  * `Stack/`: Custom Stack implementations (ArrayList & LinkedList) + stack algorithms (Push at Bottom, Reverse String, Reverse Stack, Stock Span, Next Greater Element, Valid/Duplicate Parentheses, Max Area Histogram).
 * **Upcoming topics:** Queues, Trees, Graphs, Dynamic Programming, and more!
 
 ## 🚀 Getting Started

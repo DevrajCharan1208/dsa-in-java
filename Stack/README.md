@@ -13,6 +13,9 @@ This directory contains implementations of the **Stack** data structure (LIFO - 
 | [`SK05ReverseStack.java`](SK05ReverseStack.java) | **Problem** | Reverses a stack in-place using recursion — O(n²). |
 | [`SK06StockSpan.java`](SK06StockSpan.java) | **Problem** | Calculates stock span using a Monotonic Stack — O(n). |
 | [`SK07NextGreaterElement.java`](SK07NextGreaterElement.java) | **Problem** | Finds the next greater element for each array element using a Monotonic Stack — O(n). |
+| [`SK08ValidParenthesis.java`](SK08ValidParenthesis.java) | **Problem** | Validates parentheses symbols matching inside a string — O(n). |
+| [`SK09DuplicateParenthesis.java`](SK09DuplicateParenthesis.java) | **Problem** | Detects redundant / duplicate parenthesis in an expression — O(n). |
+| [`SK10MaxAreaHistogram.java`](SK10MaxAreaHistogram.java) | **Problem** | Finds the largest rectangular area in a histogram using monotonic stacks — O(n). |
 
 ---
 
@@ -53,6 +56,21 @@ A Stack is a linear data structure that follows the **Last In, First Out (LIFO)*
 
 ### 5. Next Greater Element (`SK07NextGreaterElement.java`)
 - **Key Concept**: Traverse the array from right to left. Maintain a **Monotonic Stack** containing elements in increasing order from top to bottom. Pop elements from the stack that are smaller than or equal to the current element. The stack's top is the next greater element (or `-1` if empty).
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(n)
+
+### 6. Valid Parentheses (`SK08ValidParenthesis.java`)
+- **Key Concept**: Push opening brackets (`(`, `{`, `[`) onto the stack. For any closing bracket, check if the stack is non-empty and the top matches the corresponding opening bracket. If it does, pop it; otherwise, the string is invalid. At the end, the stack must be empty.
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(n)
+
+### 7. Duplicate Parentheses (`SK09DuplicateParenthesis.java`)
+- **Key Concept**: Push characters onto the stack until we encounter a closing parenthesis `)`. When `)` is found, pop characters until the opening parenthesis `(` is reached. If the count of popped characters is less than 1, it means we have redundant/duplicate parentheses (like `((a+b))` or `()`). Otherwise, pop the opening parenthesis and continue.
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(n)
+
+### 8. Largest Rectangle in Histogram (`SK10MaxAreaHistogram.java`)
+- **Key Concept**: For each bar in the histogram, find the index of the first smaller bar to its right (Next Smaller Right - NSR) and to its left (Next Smaller Left - NSL) using monotonic stacks. The maximum width of a rectangle containing bar `i` is `nsr[i] - nsl[i] - 1`. The area is `heights[i] * width`.
 - **Time Complexity**: O(n)
 - **Space Complexity**: O(n)
 
