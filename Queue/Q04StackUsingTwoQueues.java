@@ -1,7 +1,7 @@
 
 import java.util.LinkedList;
 import java.util.Queue;
-
+@SuppressWarnings("static-access")
 public class Q04StackUsingTwoQueues{
     static class Stack{
 
