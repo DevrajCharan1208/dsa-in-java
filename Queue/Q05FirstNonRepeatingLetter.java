@@ -7,7 +7,7 @@ public class Q05FirstNonRepeatingLetter{
     public static char[] firstNonRepeating(String str){
         char[] res = new char[str.length()];
         Queue<Character> q = new LinkedList<>();
-        int[] freq = new int[25];
+        int[] freq = new int[26];
 
         for(int i = 0; i<str.length();i++){
             char ch = str.charAt(i);            

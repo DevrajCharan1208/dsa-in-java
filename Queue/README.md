@@ -10,6 +10,8 @@ This directory contains implementations of the **Queue** data structure (FIFO - 
 | [`Q02UsingLinkedList.java`](Q02UsingLinkedList.java) | **Custom Implementation** | Queue implemented from scratch using a Singly LinkedList tracking both head and tail. |
 | [`Q03UsingTwoStacks.java`](Q03UsingTwoStacks.java) | **Problem / Class** | Queue implemented using two Stacks. |
 | [`Q04StackUsingTwoQueues.java`](Q04StackUsingTwoQueues.java) | **Problem / Class** | Stack implemented using two Queues. |
+| [`Q05FirstNonRepeatingLetter.java`](Q05FirstNonRepeatingLetter.java) | **Problem** | Finds the first non-repeating character in a stream of characters — O(n). |
+| [`Q05InterleaveHalves.java`](Q05InterleaveHalves.java) | **Problem** | Interleaves the first half of a Queue with the second half — O(n). |
 
 ---
 
@@ -59,6 +61,16 @@ A Queue is a linear data structure that follows the **First In, First Out (FIFO)
   - Pop: O(n)
   - Peek: O(n)
 - **Space Complexity**: O(n)
+
+### 5. First Non-Repeating Character (`Q05FirstNonRepeatingLetter.java`)
+- **Key Concept**: Maintain a frequency array of size 26 and a Queue. As characters are read from the stream, add them to the Queue and increment their frequency. Pop characters from the front of the Queue while their frequency is greater than 1 (meaning they are repeating). The front of the Queue will be the first non-repeating character (or '0' if the Queue becomes empty).
+- **Time Complexity**: O(n) (each character is pushed and popped at most once)
+- **Space Complexity**: O(n) for the queue, O(1) for the fixed frequency array
+
+### 6. Interleave Halves of a Queue (`Q05InterleaveHalves.java`)
+- **Key Concept**: Remove the first half of the elements from the queue and store them in a temporary queue. Then, alternately dequeue from the temporary queue and enqueue back, followed by dequeuing from the original queue and enqueuing back. This merges the two halves in an interleaved fashion.
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(n) for the temporary queue
 
 ---
 *💡 **FIFO: First In, First Out**: Just like standing in a queue for movie tickets — the person who arrives first gets served first!* 🎟️
