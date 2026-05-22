@@ -1,5 +1,5 @@
 import java.util.*;
-public class Q05InterleaveHalves{
+public class Q06InterleaveHalves{
 
     public static void interleaveHalves(Queue<Integer> q){
         int n = q.size();
