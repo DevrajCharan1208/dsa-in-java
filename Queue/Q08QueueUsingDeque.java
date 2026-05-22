@@ -13,7 +13,7 @@ public class Q08QueueUsingDeque{
         }
 
         public int peek(){
-            return deque.getFirst();
+            return deque.getLast();
         }
 
     }

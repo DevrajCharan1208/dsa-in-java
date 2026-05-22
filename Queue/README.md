@@ -11,7 +11,10 @@ This directory contains implementations of the **Queue** data structure (FIFO - 
 | [`Q03UsingTwoStacks.java`](Q03UsingTwoStacks.java) | **Problem / Class** | Queue implemented using two Stacks. |
 | [`Q04StackUsingTwoQueues.java`](Q04StackUsingTwoQueues.java) | **Problem / Class** | Stack implemented using two Queues. |
 | [`Q05FirstNonRepeatingLetter.java`](Q05FirstNonRepeatingLetter.java) | **Problem** | Finds the first non-repeating character in a stream of characters — O(n). |
-| [`Q05InterleaveHalves.java`](Q05InterleaveHalves.java) | **Problem** | Interleaves the first half of a Queue with the second half — O(n). |
+| [`Q06InterleaveHalves.java`](Q06InterleaveHalves.java) | **Problem** | Interleaves the first half of a Queue with the second half — O(n). |
+| [`Q07ReverseQueue.java`](Q07ReverseQueue.java) | **Problem** | Reverses the elements of a Queue using an auxiliary Stack — O(n). |
+| [`Q08QueueUsingDeque.java`](Q08QueueUsingDeque.java) | **Custom Implementation** | Queue implemented using a double-ended queue (Deque). |
+| [`Q08StackUsingDeque.java`](Q08StackUsingDeque.java) | **Custom Implementation** | Stack implemented using a double-ended queue (Deque). |
 
 ---
 
@@ -67,10 +70,31 @@ A Queue is a linear data structure that follows the **First In, First Out (FIFO)
 - **Time Complexity**: O(n) (each character is pushed and popped at most once)
 - **Space Complexity**: O(n) for the queue, O(1) for the fixed frequency array
 
-### 6. Interleave Halves of a Queue (`Q05InterleaveHalves.java`)
+### 6. Interleave Halves of a Queue (`Q06InterleaveHalves.java`)
 - **Key Concept**: Remove the first half of the elements from the queue and store them in a temporary queue. Then, alternately dequeue from the temporary queue and enqueue back, followed by dequeuing from the original queue and enqueuing back. This merges the two halves in an interleaved fashion.
 - **Time Complexity**: O(n)
 - **Space Complexity**: O(n) for the temporary queue
+
+### 7. Reverse a Queue (`Q07ReverseQueue.java`)
+- **Key Concept**: Dequeue all elements from the queue and push them onto an auxiliary Stack. Since the Stack is LIFO, popping elements from the Stack and enqueuing them back into the Queue reverses the order of the elements.
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(n)
+
+### 8. Queue Using Deque (`Q08QueueUsingDeque.java`)
+- **Key Concept**: A Deque (Double Ended Queue) supports insertion and removal at both ends. We implement a FIFO queue by adding to the front of the deque (`addFirst`) and removing/peeking from the tail (`removeLast` / `getLast`).
+- **Time Complexity**: 
+  - Add: O(1)
+  - Remove: O(1)
+  - Peek: O(1)
+- **Space Complexity**: O(n)
+
+### 9. Stack Using Deque (`Q08StackUsingDeque.java`)
+- **Key Concept**: We implement a LIFO stack using a Deque by performing all push, pop, and peek operations on the same end of the Deque (`addLast`, `removeLast`, `getLast`).
+- **Time Complexity**: 
+  - Push: O(1)
+  - Pop: O(1)
+  - Peek: O(1)
+- **Space Complexity**: O(n)
 
 ---
 *💡 **FIFO: First In, First Out**: Just like standing in a queue for movie tickets — the person who arrives first gets served first!* 🎟️
