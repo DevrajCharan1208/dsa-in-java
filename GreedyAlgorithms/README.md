@@ -8,6 +8,11 @@ This directory contains implementations of various **Greedy Algorithms** in Java
 |---|---|---|
 | [`GR01ActivitySelection.java`](GR01ActivitySelection.java) | **Problem** | Maximizes the number of activities that can be performed by a single person — O(n log n). |
 | [`GR02FractionKnapsack.java`](GR02FractionKnapsack.java) | **Problem** | Maximizes the total value in a knapsack by taking fractions of items — O(n log n). |
+| [`GR03MinimumSumDIff.java`](GR03MinimumSumDIff.java) | **Problem** | Pairs elements from two arrays to minimize the sum of their absolute differences — O(n log n). |
+| [`GR04LongestChain.java`](GR04LongestChain.java) | **Problem** | Finds the longest chain of pairs where `b < c` — O(n log n). |
+| [`GR05IndianCoins.java`](GR05IndianCoins.java) | **Problem** | Finds the minimum number of coins to make change using standard Indian denominations — O(1). |
+| [`GR06JobSequencing.java`](GR06JobSequencing.java) | **Problem** | Schedules jobs with deadlines to maximize profit — O(n log n). |
+| [`GR06ChocolateBar.java`](GR06ChocolateBar.java) | **Problem** | Minimizes the cost to break a chocolate bar into 1x1 squares (Chocola) — O(n log n + m log m). |
 
 ---
 
@@ -31,11 +36,35 @@ Key properties of problems solved by Greedy methods:
   - $O(n)$ if activities are already sorted by end times.
 - **Space Complexity**: $O(n)$ to store activities with their start/end times.
 
-### 2. Fractional Knapsack (`GR02FractionKnapsack.java`)
-- **Key Concept**: Given weights and values of $n$ items, we need to put these items in a knapsack of capacity $W$ to get the maximum total value. Unlike the 0-1 Knapsack problem, we are allowed to break items (i.e., we can take a fraction of an item).
-- **Greedy Strategy**: Calculate the value-to-weight ratio ($\text{value}/\text{weight}$) for each item. Sort items in descending order of this ratio. Pick the item with the highest ratio fully. If the capacity is not enough to take the whole item, take the fraction that fits and fill the knapsack.
-- **Time Complexity**: $O(n \log n)$ to calculate ratios and sort items.
-- **Space Complexity**: $O(n)$ to store item ratios and metadata.
+### 3. Minimum Sum of Absolute Difference (`GR03MinimumSumDIff.java`)
+- **Key Concept**: Given two arrays of equal size, pair elements such that the sum of the absolute differences of the paired elements is minimized.
+- **Greedy Strategy**: Sort both arrays in ascending order and pair the elements at the same indices. Pairing the smallest elements of both arrays together minimizes the gap.
+- **Time Complexity**: $O(n \log n)$ due to sorting.
+- **Space Complexity**: $O(1)$ auxiliary space.
+
+### 4. Longest Chain of Pairs (`GR04LongestChain.java`)
+- **Key Concept**: Given $n$ pairs of numbers where the first number is always smaller than the second. A pair `(c, d)` can follow a pair `(a, b)` if `b < c`. Find the maximum length of such a chain.
+- **Greedy Strategy**: This is an extension of the Activity Selection problem. Sort the pairs based on their second element (end time) in ascending order. Build the chain by adding a pair if its first element is greater than or equal to the second element of the previously selected pair.
+- **Time Complexity**: $O(n \log n)$ due to sorting.
+- **Space Complexity**: $O(1)$ auxiliary space.
+
+### 5. Indian Coins (`GR05IndianCoins.java`)
+- **Key Concept**: Find the minimum number of coins/notes required to make change for a given amount using the canonical Indian currency system: $1, 2, 5, 10, 20, 50, 100, 500, 2000$.
+- **Greedy Strategy**: Sort the currency denominations in descending order. Iteratively select the largest denomination that is less than or equal to the remaining amount, subtract it, and repeat until the amount becomes zero.
+- **Time Complexity**: $O(1)$ relative to the amount, since the number of coin denominations is fixed (9 denominations).
+- **Space Complexity**: $O(1)$ auxiliary space.
+
+### 6. Job Sequencing (`GR06JobSequencing.java`)
+- **Key Concept**: Given a set of $n$ jobs where each job has a deadline and a profit if completed before the deadline. Schedule jobs to maximize total profit.
+- **Greedy Strategy**: Sort all jobs in descending order of their profits. Allocate each job to the latest possible free slot before or at its deadline to keep earlier slots free for jobs with tighter deadlines.
+- **Time Complexity**: $O(n \log n)$ for sorting, and $O(n \times d)$ to find free slots where $d$ is the max deadline.
+- **Space Complexity**: $O(n)$ to store job sequence and track free time slots.
+
+### 7. Chocola / Chocolate Bar Cutting (`GR06ChocolateBar.java`)
+- **Key Concept**: Given a chocolate bar of size $n \times m$. We need to break it into $1 \times 1$ squares using horizontal and vertical cuts. Minimize the total breaking cost.
+- **Greedy Strategy**: Sort both horizontal and vertical cut costs in descending order. Always perform the cut with the highest cost first. Making a cut splits the bar into more pieces, which multiplies the cost of any subsequent perpendicular cuts (e.g., cutting a piece vertically multiplies the cost of future horizontal cuts on those pieces).
+- **Time Complexity**: $O(n \log n + m \log m)$ due to sorting horizontal and vertical cuts.
+- **Space Complexity**: $O(1)$ auxiliary space.
 
 ---
 *💡 **Greedy Strategy Tip**: When designing a greedy algorithm, sorting is often the key first step to organize choices (e.g., sorting by end time, cost, ratio, or weight).* 🎯
