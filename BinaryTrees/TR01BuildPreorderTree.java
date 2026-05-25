@@ -1,3 +1,7 @@
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 @SuppressWarnings("static-access")
 public class TR01BuildPreorderTree{
     static class Node{
@@ -56,6 +60,36 @@ public class TR01BuildPreorderTree{
             postorder(root.right);
             System.out.print(root.data + " ");
         }
+
+        public static void levelOrder(Node root){
+            if(root==null){
+                return;
+            }
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+
+            while(!q.isEmpty()){
+                Node curr_Node = q.remove();
+
+                if(curr_Node==null){
+                    System.out.println("");
+                    if(q.isEmpty()){
+                        break;
+                    }else{
+                        q.add(null);
+                    }
+                }else{
+                    System.out.print(curr_Node.data);
+                    if(curr_Node.left!=null){
+                        q.add(curr_Node.left);
+                    }
+                    if(curr_Node.right!=null){
+                        q.add(curr_Node.right);
+                    }
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -69,5 +103,7 @@ public class TR01BuildPreorderTree{
         tree.inorder(root);
         System.out.println("\nPostorder Traversal");
         tree.postorder(root);
+        System.out.println("\nLevel Order Traversal");
+        tree.levelOrder(root);
     }
 }
