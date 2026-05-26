@@ -8,6 +8,8 @@ This directory contains custom implementations of the **Binary Tree** data struc
 |---|---|---|
 | [`TR01BuildPreorderTree.java`](TR01BuildPreorderTree.java) | **Implementation & Traversals** | Builds a binary tree recursively from a preorder array representation and implements tree traversals (Preorder, Inorder, Postorder, Level Order). |
 | [`TR02HeightOfATree.java`](TR02HeightOfATree.java) | **Problem** | Recursively calculates the height of a binary tree — O(n). |
+| [`TR03CountOfNodes.java`](TR03CountOfNodes.java) | **Problem** | Recursively counts the total number of nodes in a binary tree — O(n). |
+| [`TR04SumOfNodes.java`](TR04SumOfNodes.java) | **Problem** | Recursively calculates the sum of all node values in a binary tree — O(n). |
 
 ---
 
@@ -40,6 +42,16 @@ Tree traversals are methods for visiting all nodes of a tree. They are classifie
   - The height of a null node is 0.
   - For any other node, the height is $\max(\text{left subtree height}, \text{right subtree height}) + 1$.
 - **Time Complexity**: $O(n)$ since every node must be visited.
+- **Space Complexity**: $O(h)$ where $h$ is the height of the tree, representing the maximum recursive call stack depth.
+
+### 3. Count of Nodes (`TR03CountOfNodes.java`)
+- **Key Concept**: The total number of nodes in a binary tree is calculated recursively. If the node is null, it returns 0. Otherwise, it returns the sum of nodes in the left subtree plus the sum of nodes in the right subtree plus 1 (for the current node).
+- **Time Complexity**: $O(n)$ since we visit every node exactly once.
+- **Space Complexity**: $O(h)$ where $h$ is the height of the tree, representing the maximum recursive call stack depth.
+
+### 4. Sum of Nodes (`TR04SumOfNodes.java`)
+- **Key Concept**: The sum of all node values in a binary tree is calculated recursively. If the node is null, it returns 0. Otherwise, it returns the sum of node values in the left subtree plus the sum of node values in the right subtree plus the value of the current node.
+- **Time Complexity**: $O(n)$ since we visit every node exactly once.
 - **Space Complexity**: $O(h)$ where $h$ is the height of the tree, representing the maximum recursive call stack depth.
 
 ---
