@@ -10,6 +10,10 @@ This directory contains custom implementations of the **Binary Tree** data struc
 | [`TR02HeightOfATree.java`](TR02HeightOfATree.java) | **Problem** | Recursively calculates the height of a binary tree — O(n). |
 | [`TR03CountOfNodes.java`](TR03CountOfNodes.java) | **Problem** | Recursively counts the total number of nodes in a binary tree — O(n). |
 | [`TR04SumOfNodes.java`](TR04SumOfNodes.java) | **Problem** | Recursively calculates the sum of all node values in a binary tree — O(n). |
+| [`TR05DiameterOfTree.java`](TR05DiameterOfTree.java) | **Problem** | Calculates the diameter of a binary tree (slow O(n²) approach). |
+| [`TR06DiameterOfTree2.java`](TR06DiameterOfTree2.java) | **Problem** | Calculates the diameter of a binary tree (optimized O(n) approach using a helper class). |
+| [`TR07IsSubTree.java`](TR07IsSubTree.java) | **Problem** | Checks if a given tree is a subtree of another tree — O(n * m). |
+| [`TR08TopViewOfATree.java`](TR08TopViewOfATree.java) | **Problem** | Traverses and prints the top view of a binary tree level-by-level — O(n). |
 
 ---
 
@@ -53,6 +57,34 @@ Tree traversals are methods for visiting all nodes of a tree. They are classifie
 - **Key Concept**: The sum of all node values in a binary tree is calculated recursively. If the node is null, it returns 0. Otherwise, it returns the sum of node values in the left subtree plus the sum of node values in the right subtree plus the value of the current node.
 - **Time Complexity**: $O(n)$ since we visit every node exactly once.
 - **Space Complexity**: $O(h)$ where $h$ is the height of the tree, representing the maximum recursive call stack depth.
+
+### 5. Diameter of a Tree - Slow $O(n²)$ (`TR05DiameterOfTree.java`)
+- **Key Concept**: The diameter of a tree is the maximum distance between any two nodes. For each node, the diameter is the maximum of:
+  1. The diameter of the left subtree.
+  2. The diameter of the right subtree.
+  3. The path passing through the current node ($\text{height}(\text{left}) + \text{height}(\text{right}) + 1$).
+  Since heights are computed separately for each node, it results in quadratic time.
+- **Time Complexity**: $O(n^2)$
+- **Space Complexity**: $O(h)$
+
+### 6. Diameter of a Tree - Optimized $O(n)$ (`TR06DiameterOfTree2.java`)
+- **Key Concept**: We optimize the diameter calculation to linear time by returning both height and diameter in a single recursive pass using an auxiliary `Info` class. This avoids recomputing tree heights repeatedly.
+- **Time Complexity**: $O(n)$
+- **Space Complexity**: $O(h)$
+
+### 7. Subtree of Another Tree (`TR07IsSubTree.java`)
+- **Key Concept**: Checks if a given subtree `subRoot` is structurally and value-wise identical to any part of a larger binary tree. We traverse the main tree, and whenever we find a node matching the root of the subtree, we verify structural identity recursively using a helper function `isIdentical()`.
+- **Time Complexity**: $O(n \times m)$ in the worst case (where $n$ and $m$ are node counts of the main tree and subtree).
+- **Space Complexity**: $O(h_n + h_m)$ recursion stack depth.
+
+### 8. Top View of a Tree (`TR08TopViewOfATree.java`)
+- **Key Concept**: Prints the values of nodes as they would appear when viewed from the top. 
+  - We assign a horizontal distance (hd) to each node: root is 0, left is $\text{parent.hd} - 1$, right is $\text{parent.hd} + 1$.
+  - We perform level-order traversal (BFS) using a Queue and store the horizontal distance of each node.
+  - A `HashMap` stores only the first node encountered for each unique horizontal distance (since BFS processes top nodes first).
+  - Track minimum and maximum horizontal distances to output nodes in order.
+- **Time Complexity**: $O(n)$
+- **Space Complexity**: $O(n)$ to store BFS queue elements and horizontal distance map entries.
 
 ---
 *💡 **Binary Tree Concept**: A tree is a non-linear, hierarchical data structure. A Binary Tree is a tree in which each node has at most two children, referred to as the left child and the right child.* 🌳
