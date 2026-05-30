@@ -14,6 +14,10 @@ This directory contains custom implementations of the **Binary Tree** data struc
 | [`TR06DiameterOfTree2.java`](TR06DiameterOfTree2.java) | **Problem** | Calculates the diameter of a binary tree (optimized O(n) approach using a helper class). |
 | [`TR07IsSubTree.java`](TR07IsSubTree.java) | **Problem** | Checks if a given tree is a subtree of another tree — O(n * m). |
 | [`TR08TopViewOfATree.java`](TR08TopViewOfATree.java) | **Problem** | Traverses and prints the top view of a binary tree level-by-level — O(n). |
+| [`TR09KthLevel.java`](TR09KthLevel.java) | **Problem** | Finds and prints all nodes located at the K-th level of a binary tree — O(n). |
+| [`TR10LowestCommonAncestor.java`](TR10LowestCommonAncestor.java) | **Problem** | Finds the lowest common ancestor of two nodes by storing root-to-node paths — O(n). |
+| [`TR11LowestCommonAncestor2.java`](TR11LowestCommonAncestor2.java) | **Problem** | Finds the lowest common ancestor of two nodes in a single recursive pass — O(n). |
+| [`TR12MinDistanceBetweenNodes.java`](TR12MinDistanceBetweenNodes.java) | **Problem** | Calculates the minimum distance (number of edges) between two nodes — O(n). |
 
 ---
 
@@ -85,6 +89,26 @@ Tree traversals are methods for visiting all nodes of a tree. They are classifie
   - Track minimum and maximum horizontal distances to output nodes in order.
 - **Time Complexity**: $O(n)$
 - **Space Complexity**: $O(n)$ to store BFS queue elements and horizontal distance map entries.
+
+### 9. Nodes at K-th Level (`TR09KthLevel.java`)
+- **Key Concept**: To retrieve all nodes at a given level `k`, we do a recursive DFS traversal of the tree, passing along a `level` variable. When `level == k`, we add the node's value to our result list and backtrack.
+- **Time Complexity**: $O(n)$ in the worst case (as we might visit all nodes).
+- **Space Complexity**: $O(h)$ for recursion stack.
+
+### 10. Lowest Common Ancestor - Path Method (`TR10LowestCommonAncestor.java`)
+- **Key Concept**: Find the root-to-node paths for both target nodes `n1` and `n2`. Compare the paths simultaneously until they diverge; the last common node before divergence is the lowest common ancestor.
+- **Time Complexity**: $O(n)$
+- **Space Complexity**: $O(n)$ to store paths of sizes up to tree height.
+
+### 11. Lowest Common Ancestor - Recursive Method (`TR11LowestCommonAncestor2.java`)
+- **Key Concept**: Find the LCA recursively in a single pass without extra path storage. If root is null, or matches `n1` or `n2`, return root. Recursively search left and right subtrees. If one is null, return the other; if both are non-null, root is the LCA.
+- **Time Complexity**: $O(n)$
+- **Space Complexity**: $O(h)$ (recursion stack space).
+
+### 12. Minimum Distance Between Two Nodes (`TR12MinDistanceBetweenNodes.java`)
+- **Key Concept**: The minimum distance (number of edges) between nodes `n1` and `n2` is equal to the distance from their Lowest Common Ancestor (LCA) to `n1` plus the distance from the LCA to `n2`. We calculate the LCA, and then run a helper function `lcaDist` to find the distance of each node from the LCA.
+- **Time Complexity**: $O(n)$
+- **Space Complexity**: $O(h)$ (recursion stack space).
 
 ---
 *💡 **Binary Tree Concept**: A tree is a non-linear, hierarchical data structure. A Binary Tree is a tree in which each node has at most two children, referred to as the left child and the right child.* 🌳
