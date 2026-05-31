@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 @SuppressWarnings("static-access")
-public class TR01BuildPreorderTree{
+public class BT01BuildPreorderTree{
     static class Node{
         int data;
         Node left;

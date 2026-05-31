@@ -1,4 +1,4 @@
-public class TR14TransfromToSumTree{
+public class BT14TransfromToSumTree{
     static class Node{
         int data;
         Node left;

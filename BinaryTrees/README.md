@@ -6,18 +6,20 @@ This directory contains custom implementations of the **Binary Tree** data struc
 
 | File | Type | Description |
 |---|---|---|
-| [`TR01BuildPreorderTree.java`](TR01BuildPreorderTree.java) | **Implementation & Traversals** | Builds a binary tree recursively from a preorder array representation and implements tree traversals (Preorder, Inorder, Postorder, Level Order). |
-| [`TR02HeightOfATree.java`](TR02HeightOfATree.java) | **Problem** | Recursively calculates the height of a binary tree — O(n). |
-| [`TR03CountOfNodes.java`](TR03CountOfNodes.java) | **Problem** | Recursively counts the total number of nodes in a binary tree — O(n). |
-| [`TR04SumOfNodes.java`](TR04SumOfNodes.java) | **Problem** | Recursively calculates the sum of all node values in a binary tree — O(n). |
-| [`TR05DiameterOfTree.java`](TR05DiameterOfTree.java) | **Problem** | Calculates the diameter of a binary tree (slow O(n²) approach). |
-| [`TR06DiameterOfTree2.java`](TR06DiameterOfTree2.java) | **Problem** | Calculates the diameter of a binary tree (optimized O(n) approach using a helper class). |
-| [`TR07IsSubTree.java`](TR07IsSubTree.java) | **Problem** | Checks if a given tree is a subtree of another tree — O(n * m). |
-| [`TR08TopViewOfATree.java`](TR08TopViewOfATree.java) | **Problem** | Traverses and prints the top view of a binary tree level-by-level — O(n). |
-| [`TR09KthLevel.java`](TR09KthLevel.java) | **Problem** | Finds and prints all nodes located at the K-th level of a binary tree — O(n). |
-| [`TR10LowestCommonAncestor.java`](TR10LowestCommonAncestor.java) | **Problem** | Finds the lowest common ancestor of two nodes by storing root-to-node paths — O(n). |
-| [`TR11LowestCommonAncestor2.java`](TR11LowestCommonAncestor2.java) | **Problem** | Finds the lowest common ancestor of two nodes in a single recursive pass — O(n). |
-| [`TR12MinDistanceBetweenNodes.java`](TR12MinDistanceBetweenNodes.java) | **Problem** | Calculates the minimum distance (number of edges) between two nodes — O(n). |
+| [`BT01BuildPreorderTree.java`](BT01BuildPreorderTree.java) | **Implementation & Traversals** | Builds a binary tree recursively from a preorder array representation and implements tree traversals (Preorder, Inorder, Postorder, Level Order). |
+| [`BT02HeightOfATree.java`](BT02HeightOfATree.java) | **Problem** | Recursively calculates the height of a binary tree — O(n). |
+| [`BT03CountOfNodes.java`](BT03CountOfNodes.java) | **Problem** | Recursively counts the total number of nodes in a binary tree — O(n). |
+| [`BT04SumOfNodes.java`](BT04SumOfNodes.java) | **Problem** | Recursively calculates the sum of all node values in a binary tree — O(n). |
+| [`BT05DiameterOfTree.java`](BT05DiameterOfTree.java) | **Problem** | Calculates the diameter of a binary tree (slow O(n²) approach). |
+| [`BT06DiameterOfTree2.java`](BT06DiameterOfTree2.java) | **Problem** | Calculates the diameter of a binary tree (optimized O(n) approach using a helper class). |
+| [`BT07IsSubTree.java`](BT07IsSubTree.java) | **Problem** | Checks if a given tree is a subtree of another tree — O(n * m). |
+| [`BT08TopViewOfATree.java`](BT08TopViewOfATree.java) | **Problem** | Traverses and prints the top view of a binary tree level-by-level — O(n). |
+| [`BT09KthLevel.java`](BT09KthLevel.java) | **Problem** | Finds and prints all nodes located at the K-th level of a binary tree — O(n). |
+| [`BT10LowestCommonAncestor.java`](BT10LowestCommonAncestor.java) | **Problem** | Finds the lowest common ancestor of two nodes by storing root-to-node paths — O(n). |
+| [`BT11LowestCommonAncestor2.java`](BT11LowestCommonAncestor2.java) | **Problem** | Finds the lowest common ancestor of two nodes in a single recursive pass — O(n). |
+| [`BT12MinDistanceBetweenNodes.java`](BT12MinDistanceBetweenNodes.java) | **Problem** | Calculates the minimum distance (number of edges) between two nodes — O(n). |
+| [`BT13KthAncestor.java`](BT13KthAncestor.java) | **Problem** | Finds the K-th ancestor of a target node — O(n). |
+| [`BT14TransfromToSumTree.java`](BT14TransfromToSumTree.java) | **Problem** | Transforms a tree to a Sum Tree where each node is the sum of its subtrees — O(n). |
 
 ---
 
@@ -37,7 +39,7 @@ Tree traversals are methods for visiting all nodes of a tree. They are classifie
 
 ## 📝 Problem Summaries
 
-### 1. Build Preorder Tree (`TR01BuildPreorderTree.java`)
+### 1. Build Preorder Tree (`BT01BuildPreorderTree.java`)
 - **Key Concept**: Constructs a binary tree recursively from a preorder array containing node values, where `-1` represents a null node. 
   - A static index tracks the current position.
   - If the array element is `-1`, return `null`.
@@ -45,24 +47,24 @@ Tree traversals are methods for visiting all nodes of a tree. They are classifie
 - **Time Complexity**: $O(n)$ where $n$ is the number of elements in the array.
 - **Space Complexity**: $O(n)$ call stack depth in the worst case (skewed tree), or $O(\log n)$ in the best case (balanced tree).
 
-### 2. Height of a Tree (`TR02HeightOfATree.java`)
+### 2. Height of a Tree (`BT02HeightOfATree.java`)
 - **Key Concept**: The height of a binary tree is the length of the longest path from the root to a leaf node. 
   - The height of a null node is 0.
   - For any other node, the height is $\max(\text{left subtree height}, \text{right subtree height}) + 1$.
 - **Time Complexity**: $O(n)$ since every node must be visited.
 - **Space Complexity**: $O(h)$ where $h$ is the height of the tree, representing the maximum recursive call stack depth.
 
-### 3. Count of Nodes (`TR03CountOfNodes.java`)
+### 3. Count of Nodes (`BT03CountOfNodes.java`)
 - **Key Concept**: The total number of nodes in a binary tree is calculated recursively. If the node is null, it returns 0. Otherwise, it returns the sum of nodes in the left subtree plus the sum of nodes in the right subtree plus 1 (for the current node).
 - **Time Complexity**: $O(n)$ since we visit every node exactly once.
 - **Space Complexity**: $O(h)$ where $h$ is the height of the tree, representing the maximum recursive call stack depth.
 
-### 4. Sum of Nodes (`TR04SumOfNodes.java`)
+### 4. Sum of Nodes (`BT04SumOfNodes.java`)
 - **Key Concept**: The sum of all node values in a binary tree is calculated recursively. If the node is null, it returns 0. Otherwise, it returns the sum of node values in the left subtree plus the sum of node values in the right subtree plus the value of the current node.
 - **Time Complexity**: $O(n)$ since we visit every node exactly once.
 - **Space Complexity**: $O(h)$ where $h$ is the height of the tree, representing the maximum recursive call stack depth.
 
-### 5. Diameter of a Tree - Slow $O(n²)$ (`TR05DiameterOfTree.java`)
+### 5. Diameter of a Tree - Slow $O(n²)$ (`BT05DiameterOfTree.java`)
 - **Key Concept**: The diameter of a tree is the maximum distance between any two nodes. For each node, the diameter is the maximum of:
   1. The diameter of the left subtree.
   2. The diameter of the right subtree.
@@ -71,17 +73,17 @@ Tree traversals are methods for visiting all nodes of a tree. They are classifie
 - **Time Complexity**: $O(n^2)$
 - **Space Complexity**: $O(h)$
 
-### 6. Diameter of a Tree - Optimized $O(n)$ (`TR06DiameterOfTree2.java`)
+### 6. Diameter of a Tree - Optimized $O(n)$ (`BT06DiameterOfTree2.java`)
 - **Key Concept**: We optimize the diameter calculation to linear time by returning both height and diameter in a single recursive pass using an auxiliary `Info` class. This avoids recomputing tree heights repeatedly.
 - **Time Complexity**: $O(n)$
 - **Space Complexity**: $O(h)$
 
-### 7. Subtree of Another Tree (`TR07IsSubTree.java`)
+### 7. Subtree of Another Tree (`BT07IsSubTree.java`)
 - **Key Concept**: Checks if a given subtree `subRoot` is structurally and value-wise identical to any part of a larger binary tree. We traverse the main tree, and whenever we find a node matching the root of the subtree, we verify structural identity recursively using a helper function `isIdentical()`.
 - **Time Complexity**: $O(n \times m)$ in the worst case (where $n$ and $m$ are node counts of the main tree and subtree).
 - **Space Complexity**: $O(h_n + h_m)$ recursion stack depth.
 
-### 8. Top View of a Tree (`TR08TopViewOfATree.java`)
+### 8. Top View of a Tree (`BT08TopViewOfATree.java`)
 - **Key Concept**: Prints the values of nodes as they would appear when viewed from the top. 
   - We assign a horizontal distance (hd) to each node: root is 0, left is $\text{parent.hd} - 1$, right is $\text{parent.hd} + 1$.
   - We perform level-order traversal (BFS) using a Queue and store the horizontal distance of each node.
@@ -90,25 +92,35 @@ Tree traversals are methods for visiting all nodes of a tree. They are classifie
 - **Time Complexity**: $O(n)$
 - **Space Complexity**: $O(n)$ to store BFS queue elements and horizontal distance map entries.
 
-### 9. Nodes at K-th Level (`TR09KthLevel.java`)
+### 9. Nodes at K-th Level (`BT09KthLevel.java`)
 - **Key Concept**: To retrieve all nodes at a given level `k`, we do a recursive DFS traversal of the tree, passing along a `level` variable. When `level == k`, we add the node's value to our result list and backtrack.
 - **Time Complexity**: $O(n)$ in the worst case (as we might visit all nodes).
 - **Space Complexity**: $O(h)$ for recursion stack.
 
-### 10. Lowest Common Ancestor - Path Method (`TR10LowestCommonAncestor.java`)
+### 10. Lowest Common Ancestor - Path Method (`BT10LowestCommonAncestor.java`)
 - **Key Concept**: Find the root-to-node paths for both target nodes `n1` and `n2`. Compare the paths simultaneously until they diverge; the last common node before divergence is the lowest common ancestor.
 - **Time Complexity**: $O(n)$
 - **Space Complexity**: $O(n)$ to store paths of sizes up to tree height.
 
-### 11. Lowest Common Ancestor - Recursive Method (`TR11LowestCommonAncestor2.java`)
+### 11. Lowest Common Ancestor - Recursive Method (`BT11LowestCommonAncestor2.java`)
 - **Key Concept**: Find the LCA recursively in a single pass without extra path storage. If root is null, or matches `n1` or `n2`, return root. Recursively search left and right subtrees. If one is null, return the other; if both are non-null, root is the LCA.
 - **Time Complexity**: $O(n)$
 - **Space Complexity**: $O(h)$ (recursion stack space).
 
-### 12. Minimum Distance Between Two Nodes (`TR12MinDistanceBetweenNodes.java`)
+### 12. Minimum Distance Between Two Nodes (`BT12MinDistanceBetweenNodes.java`)
 - **Key Concept**: The minimum distance (number of edges) between nodes `n1` and `n2` is equal to the distance from their Lowest Common Ancestor (LCA) to `n1` plus the distance from the LCA to `n2`. We calculate the LCA, and then run a helper function `lcaDist` to find the distance of each node from the LCA.
 - **Time Complexity**: $O(n)$
 - **Space Complexity**: $O(h)$ (recursion stack space).
+
+### 13. K-th Ancestor of a Node (`BT13KthAncestor.java`)
+- **Key Concept**: Find the K-th ancestor of a node. Recursively check subtrees, returning the distance to the target node. When the distance `+ 1` equals `k`, we've found the ancestor and can print it. If subtrees don't contain the target, they return `-1`.
+- **Time Complexity**: $O(n)$
+- **Space Complexity**: $O(h)$
+
+### 14. Transform to Sum Tree (`BT14TransfromToSumTree.java`)
+- **Key Concept**: Modifies the tree in-place so each node's value is replaced by the sum of all nodes in its left and right subtrees. This uses a bottom-up DFS. We store the original node value before updating it.
+- **Time Complexity**: $O(n)$
+- **Space Complexity**: $O(h)$
 
 ---
 *💡 **Binary Tree Concept**: A tree is a non-linear, hierarchical data structure. A Binary Tree is a tree in which each node has at most two children, referred to as the left child and the right child.* 🌳

@@ -1,4 +1,4 @@
-public class TR06DiameterOfTree2{
+public class BT05DiameterOfTree{
     @SuppressWarnings("unused")
     public static class Node{
         int data;
@@ -12,32 +12,30 @@ public class TR06DiameterOfTree2{
         }
     }
 
-    static class Info{
-        int diam;
-        int ht;
-
-        Info(int diam, int ht){
-            this.diam = diam;
-            this.ht = ht;
+    public static int height(Node root){
+        if(root == null){
+            return 0;
         }
+
+        int lh = height(root.left);
+        int rh = height(root.right);
+        return Math.max(lh,rh)+1;
     }
 
-    static Info diameter(Node root){
+    public static int diameter(Node root){
         if(root==null){
-            return new Info(0,0);
+            return 0;
         }
+        int lh = height(root.left);
+        int rh = height(root.right);
 
-        Info leftInfo = diameter(root.left);
-        Info rightInfo = diameter(root.right);
+        int rootH = lh+rh+1;
+        int lDiam = diameter(root.left);
+        int rDiam = diameter(root.right);
 
-        int diameter = Math.max(leftInfo.diam,Math.max(rightInfo.diam,leftInfo.ht+rightInfo.ht+1));
-        int ht = Math.max(leftInfo.ht,rightInfo.ht)+1;
-
-        return new Info(diameter,ht);
+        return Math.max(rootH,Math.max(lDiam,rDiam));
 
     }
-
-
 
     public static void main(String[] args) {
         Node root = new Node(1);
@@ -49,6 +47,6 @@ public class TR06DiameterOfTree2{
         root.right.right =new Node(7);
         root.right.right.right = new Node(8);
 
-        System.out.println(diameter(root).diam+ " "+ diameter(root).ht);
+        System.out.println(diameter(root));
     }
 }

@@ -1,4 +1,4 @@
-public class TR04SumOfNodes{
+public class BT04SumOfNodes{
     @SuppressWarnings("unused")
     public static class Node{
         int data;

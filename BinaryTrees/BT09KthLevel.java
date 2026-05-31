@@ -1,5 +1,5 @@
 import java.util.*;
-public class TR09KthLevel{
+public class BT09KthLevel{
     public static class Node{
         int data;
         Node left;

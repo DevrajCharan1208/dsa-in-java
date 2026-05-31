@@ -1,4 +1,4 @@
-public class TR13KthAncestor{
+public class BT13KthAncestor{
     static class Node{
         int data;
         Node left;

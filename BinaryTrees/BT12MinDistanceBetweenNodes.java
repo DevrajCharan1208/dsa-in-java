@@ -1,4 +1,4 @@
-public class TR12MinDistanceBetweenNodes{
+public class BT12MinDistanceBetweenNodes{
     static class Node{
         int data;
         Node left;

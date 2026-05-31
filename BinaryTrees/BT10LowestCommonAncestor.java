@@ -1,7 +1,7 @@
 
 import java.util.ArrayList;
 
-public class TR10LowestCommonAncestor{
+public class BT10LowestCommonAncestor{
     static class Node{
         int data;
         Node left;

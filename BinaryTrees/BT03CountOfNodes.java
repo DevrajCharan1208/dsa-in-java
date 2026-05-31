@@ -1,6 +1,6 @@
-public class TR02HeightOfATree{
+public class BT03CountOfNodes{
     @SuppressWarnings("unused")
-   public static class Node{
+    public static class Node{
         int data;
         Node left;
         Node right;
@@ -12,14 +12,14 @@ public class TR02HeightOfATree{
         }
     }
 
-    public static int height(Node root){
-        if(root == null){
+    public static int countNodes(Node root){
+        if(root==null){
             return 0;
         }
 
-        int lh = height(root.left);
-        int rh = height(root.right);
-        return Math.max(lh,rh)+1;
+        int lcount = countNodes(root.left);
+        int rcount = countNodes(root.right);
+        return lcount+rcount+1;
     }
 
     public static void main(String[] args) {
@@ -31,6 +31,7 @@ public class TR02HeightOfATree{
         root.right.left = new Node(6);
         root.right.right =new Node(7);
 
-        System.out.println(height(root));
+        System.out.println(countNodes(root));
     }
+
 }

@@ -1,4 +1,4 @@
-public class TR11LowestCommonAncestor2{
+public class BT11LowestCommonAncestor2{
     static class Node{
         int data;
         Node left;

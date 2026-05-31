@@ -1,6 +1,6 @@
 import java.util.*;
 @SuppressWarnings("unused")
-public class TR08TopViewOfATree{
+public class BT08TopViewOfATree{
     public static class Node{
         int data;
         Node left;
