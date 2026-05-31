@@ -1,4 +1,4 @@
-public class BT06SudokuSolver{
+public class BKT06SudokuSolver{
     public static boolean isSafe(int[][] sudoku, int row, int col, int digit){
         //Row
         for(int j = 0; j<9;j++){

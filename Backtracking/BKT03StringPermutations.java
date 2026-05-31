@@ -1,4 +1,4 @@
-public class BT03StringPermutations{
+public class BKT03StringPermutations{
     public static void stringPermutations(String str, String ans){
         if(str.length()==0){
             System.out.println(ans);

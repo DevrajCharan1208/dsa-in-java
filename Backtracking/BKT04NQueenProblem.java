@@ -1,6 +1,6 @@
 
 
-public class BT04NQueenProblem{
+public class BKT04NQueenProblem{
     public static void nQueens(char[][] board, int row){
         if(row == board.length){
             printBoard(board);

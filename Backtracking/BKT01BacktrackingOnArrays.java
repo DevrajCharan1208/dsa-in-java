@@ -1,4 +1,4 @@
-public class BT01BacktrackingOnArrays{
+public class BKT01BacktrackingOnArrays{
 
     public static void changeArr(int[] arr,int i,int val){
         if(i==arr.length){

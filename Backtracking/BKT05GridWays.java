@@ -1,4 +1,4 @@
-public class BT05GridWays{
+public class BKT05GridWays{
     public static int gridWays(int i, int j, int n, int m){
         if(i==n-1&&j==m-1){
             return 1;

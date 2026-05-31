@@ -1,4 +1,4 @@
-public class BT02StringSubsets{
+public class BKT02StringSubsets{
     public static void stringSubset(String str,int i, String subStr){
         if (i == str.length()){
             if(subStr.length()==0){
