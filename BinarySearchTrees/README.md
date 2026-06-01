@@ -8,6 +8,10 @@ This directory contains implementations of the **Binary Search Tree (BST)** data
 |---|---|---|
 | [`BST01BuildingBST.java`](BST01BuildingBST.java) | **Implementation** | Constructs a BST by iteratively inserting values. Also includes Inorder traversal (which yields a sorted array) and a boolean `search` function. |
 | [`BST02DeleteANode.java`](BST02DeleteANode.java) | **Implementation** | Implements the deletion of a node from a BST, handling all 3 cases: node with no child (leaf), node with one child, and node with two children (using inorder successor). |
+| [`BST03PrintInRange.java`](BST03PrintInRange.java) | **Problem** | Prints all elements of a BST that fall within a given range `[k1, k2]`. |
+| [`BST04RootToLeafPath.java`](BST04RootToLeafPath.java) | **Problem** | Finds and prints all paths from the root node to the leaf nodes. |
+| [`BST05IsSubTreeValid.java`](BST05IsSubTreeValid.java) | **Problem** | Validates if a given binary tree is a valid Binary Search Tree using the `min, max` boundary approach. |
+| [`BST06MirrorBST.java`](BST06MirrorBST.java) | **Problem** | Converts a Binary Search Tree into its mirror tree by recursively swapping left and right children. |
 
 ---
 
@@ -36,6 +40,29 @@ This property guarantees that an **Inorder Traversal** of a BST will always outp
   3. **Case 3 (Two children)**: Find the **Inorder Successor** (the smallest node in the right subtree). Replace the target node's value with the inorder successor's value, and then recursively delete the inorder successor.
 - **Time Complexity**: $O(h)$ to find the node and potentially its successor.
 - **Space Complexity**: $O(h)$ for the recursion stack space.
+
+### 3. Print in Range (`BST03PrintInRange.java`)
+- **Key Concept**: Traverses the BST to find elements in the range `[k1, k2]`. Uses the BST property to optimize traversal:
+  - If `root.data` is within range, print it and recursively search both left and right subtrees.
+  - If `root.data < k1`, only search the right subtree.
+  - If `root.data > k2`, only search the left subtree.
+- **Time Complexity**: $O(n)$ in the worst case if all elements are in range, but practically faster as it prunes branches.
+- **Space Complexity**: $O(h)$ for the recursion stack.
+
+### 4. Root to Leaf Paths (`BST04RootToLeafPath.java`)
+- **Key Concept**: Uses Depth-First Search (DFS) with an `ArrayList` to track the current path. When a leaf node is reached (`left == null && right == null`), the current path is added to the list of all paths. Important to remove the last node from the path list when backtracking.
+- **Time Complexity**: $O(n)$ to visit every node.
+- **Space Complexity**: $O(h)$ for recursion stack and path storage.
+
+### 5. Validate BST (`BST05IsSubTreeValid.java`)
+- **Key Concept**: To check if a tree is a valid BST, each node must fall within a specific `(min, max)` range. The root starts with `(null, null)`. When moving left, the `max` becomes the current node's data. When moving right, the `min` becomes the current node's data.
+- **Time Complexity**: $O(n)$ to visit every node.
+- **Space Complexity**: $O(h)$ for the recursion stack.
+
+### 6. Mirror a BST (`BST06MirrorBST.java`)
+- **Key Concept**: A mirror tree is created by swapping the left and right children of all non-leaf nodes. This is done via a simple post-order or pre-order DFS traversal, swapping `root.left` and `root.right` at every step.
+- **Time Complexity**: $O(n)$ to visit every node.
+- **Space Complexity**: $O(h)$ for the recursion stack.
 
 ---
 *💡 **Fun Fact**: Most BST operations take $O(h)$ time, making them highly efficient ($O(\log n)$) when the tree is balanced (like in an AVL or Red-Black Tree).* 🌲
