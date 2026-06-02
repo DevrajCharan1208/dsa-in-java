@@ -14,6 +14,7 @@ This directory contains implementations of the **Binary Search Tree (BST)** data
 | [`BST06MirrorBST.java`](BST06MirrorBST.java) | **Problem** | Converts a Binary Search Tree into its mirror tree by recursively swapping left and right children. |
 | [`BST07SortedArrayToBalancedBST.java`](BST07SortedArrayToBalancedBST.java) | **Implementation** | Constructs a balanced Binary Search Tree from a sorted array. |
 | [`BST08BSTtoBalancedBST.java`](BST08BSTtoBalancedBST.java) | **Implementation** | Converts an unbalanced Binary Search Tree into a balanced one using inorder traversal. |
+| [`BST09LargestBSTinBT.java`](BST09LargestBSTinBT.java) | **Problem** | Finds the size of the largest Binary Search Tree that is a subtree of a given Binary Tree. |
 
 ---
 
@@ -75,6 +76,11 @@ This property guarantees that an **Inorder Traversal** of a BST will always outp
 - **Key Concept**: An unbalanced (skewed) BST can be balanced by first extracting its elements in sorted order. We do an **inorder traversal** and store the elements in an `ArrayList`. Then, we apply the exact same logic as `BST07` (picking the middle element recursively) to build a new balanced BST from the sorted list.
 - **Time Complexity**: $O(n)$ for the inorder traversal + $O(n)$ to build the new tree = $O(n)$ total.
 - **Space Complexity**: $O(n)$ to store the inorder sequence in an array list, plus $O(\log n)$ for the tree construction recursion stack.
+
+### 9. Largest BST in a Binary Tree (`BST09LargestBSTinBT.java`)
+- **Key Concept**: Finds the largest subtree that satisfies the BST property in a general binary tree. It uses a **bottom-up post-order traversal**, returning an `Info` object for each subtree containing `isBST`, `size`, `min`, and `max`. A tree is a valid BST if both its left and right subtrees are valid BSTs, its data is greater than the max of the left subtree, and less than the min of the right subtree. We keep track of the maximum size encountered so far globally.
+- **Time Complexity**: $O(n)$ since each node is visited once and does constant $O(1)$ work checking validity.
+- **Space Complexity**: $O(h)$ for the recursion stack space.
 
 ---
 *💡 **Fun Fact**: Most BST operations take $O(h)$ time, making them highly efficient ($O(\log n)$) when the tree is balanced (like in an AVL or Red-Black Tree).* 🌲
