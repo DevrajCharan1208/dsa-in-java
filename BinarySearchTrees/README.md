@@ -12,6 +12,8 @@ This directory contains implementations of the **Binary Search Tree (BST)** data
 | [`BST04RootToLeafPath.java`](BST04RootToLeafPath.java) | **Problem** | Finds and prints all paths from the root node to the leaf nodes. |
 | [`BST05IsSubTreeValid.java`](BST05IsSubTreeValid.java) | **Problem** | Validates if a given binary tree is a valid Binary Search Tree using the `min, max` boundary approach. |
 | [`BST06MirrorBST.java`](BST06MirrorBST.java) | **Problem** | Converts a Binary Search Tree into its mirror tree by recursively swapping left and right children. |
+| [`BST07SortedArrayToBalancedBST.java`](BST07SortedArrayToBalancedBST.java) | **Implementation** | Constructs a balanced Binary Search Tree from a sorted array. |
+| [`BST08BSTtoBalancedBST.java`](BST08BSTtoBalancedBST.java) | **Implementation** | Converts an unbalanced Binary Search Tree into a balanced one using inorder traversal. |
 
 ---
 
@@ -63,6 +65,16 @@ This property guarantees that an **Inorder Traversal** of a BST will always outp
 - **Key Concept**: A mirror tree is created by swapping the left and right children of all non-leaf nodes. This is done via a simple post-order or pre-order DFS traversal, swapping `root.left` and `root.right` at every step.
 - **Time Complexity**: $O(n)$ to visit every node.
 - **Space Complexity**: $O(h)$ for the recursion stack.
+
+### 7. Sorted Array to Balanced BST (`BST07SortedArrayToBalancedBST.java`)
+- **Key Concept**: To create a balanced BST from a sorted array, the middle element of the array must become the root. The left half of the array recursively forms the left subtree, and the right half forms the right subtree. This ensures that the height difference between the left and right subtrees is at most 1.
+- **Time Complexity**: $O(n)$ to process each element of the array once.
+- **Space Complexity**: $O(\log n)$ for the recursion stack since the tree is perfectly balanced.
+
+### 8. Convert BST to Balanced BST (`BST08BSTtoBalancedBST.java`)
+- **Key Concept**: An unbalanced (skewed) BST can be balanced by first extracting its elements in sorted order. We do an **inorder traversal** and store the elements in an `ArrayList`. Then, we apply the exact same logic as `BST07` (picking the middle element recursively) to build a new balanced BST from the sorted list.
+- **Time Complexity**: $O(n)$ for the inorder traversal + $O(n)$ to build the new tree = $O(n)$ total.
+- **Space Complexity**: $O(n)$ to store the inorder sequence in an array list, plus $O(\log n)$ for the tree construction recursion stack.
 
 ---
 *💡 **Fun Fact**: Most BST operations take $O(h)$ time, making them highly efficient ($O(\log n)$) when the tree is balanced (like in an AVL or Red-Black Tree).* 🌲
