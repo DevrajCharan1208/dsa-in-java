@@ -33,7 +33,7 @@ public class BST08BSTtoBalancedBST{
         return root;
     }
 
-    public static void preorder(Node root){
+    private static void preorder(Node root){
         if(root == null){
             System.out.print(-1+ " ");
             return;
