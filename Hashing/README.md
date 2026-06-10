@@ -28,6 +28,13 @@ Hashing is a technique to uniquely identify objects and store them in a way that
 - **`HashSet<E>`**: Stores unique elements. Internally implemented using a `HashMap` where the values are dummy objects.
 - **Time Complexity**: Average case $O(1)$ for `put`, `get`, `remove`, and `containsKey`. Worst case $O(N)$ (if many collisions occur, though Java 8+ optimizes this with Red-Black trees).
 
+### Linked & Tree Variants
+*(Note: Code for these isn't explicitly included to avoid redundant boilerplate, but they are crucial for specific DSA scenarios)*
+- **`LinkedHashMap` / `LinkedHashSet`**: Maintains the **insertion order** of elements. They use a Doubly-Linked List across all elements in the hash table. 
+  - *Time Complexity*: $O(1)$ operations, just like standard Hash structures, but with slightly higher constant overhead.
+- **`TreeMap` / `TreeSet`**: Maintains elements in **sorted (ascending) order** based on their keys. Internally implemented using a **Red-Black Tree** (a self-balancing Binary Search Tree).
+  - *Time Complexity*: $O(\log N)$ for `put`, `get`, `remove`, and `containsKey`. Use only when ordering is strictly required.
+
 ### Standard Patterns using Hashing
 
 1. **Frequency Maps (`HS02`, `HS03`)**
