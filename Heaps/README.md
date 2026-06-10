@@ -12,6 +12,7 @@ This directory contains implementations of the **Heap** data structure, **Priori
 | [`H04NearbyCars.java`](H04NearbyCars.java) | **Problem** | Finds the $K$ closest cars to the origin $(0,0)$ using a Priority Queue and custom class comparison (based on distance squared). |
 | [`H05ConnectNRopes.java`](H05ConnectNRopes.java) | **Problem** | Finds the minimum cost to connect $N$ ropes using a Min-Priority Queue. Greedy choice: always connect the two smallest ropes first. |
 | [`H06WeakestSoldier.java`](H06WeakestSoldier.java) | **Problem** | Finds the $K$ weakest rows in a binary matrix. A row is weaker if it has fewer soldiers (1s), or if tied, a smaller index. |
+| [`H07SlidingWindowMaximum.java`](H07SlidingWindowMaximum.java) | **Problem** | Finds the maximum element in every sliding window of size $K$. Uses a Max-Heap storing `(value, index)` and lazily removes elements that fall out of the window bounds. |
 
 ---
 
