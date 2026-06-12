@@ -31,6 +31,7 @@ As I learn and practice, I will be pushing code related to various topics, start
   * `BinarySearchTrees/`: Binary Search Tree (BST) fundamentals, including insertion, search, and deletion (handling all child cases).
   * `Heaps/`: Custom Heap implementations, Java `PriorityQueue`, Heap Sort, and various heap-based problem solving (Nearby Cars, Connect N Ropes).
   * `Hashing/`: Custom HashMap implementation, Java's `HashMap` & `HashSet`, and classic problems like Valid Anagram, Subarray Sums, and Itinerary finding.
+  * `Tries/`: Prefix Trees for optimal string storage and prefix-searching, covering insertion, search, word breaks, and unique substrings.
 * **Upcoming topics:** Graphs, Dynamic Programming, and more!
 
 ## 🚀 Getting Started
