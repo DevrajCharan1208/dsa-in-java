@@ -11,6 +11,7 @@ This directory contains implementations of the **Trie** data structure, which is
 | [`T03PrefixProblem.java`](T03PrefixProblem.java) | **Problem** | Finds the shortest unique prefix to represent every word in an array. Modifies the Trie node to track a `freq` variable during insertion. |
 | [`T04StartsWith.java`](T04StartsWith.java) | **Implementation** | Implements the `startsWith(prefix)` utility. Similar to `search()`, but does not require the End Of Word (`eow`) flag to be true at the last matched character. |
 | [`T05UniqueSubstrings.java`](T05UniqueSubstrings.java) | **Problem** | Finds the total number of unique substrings for a given string. Achieves this by inserting all suffixes of the string into a Trie; the total number of nodes in the Trie (including the root) equals the number of unique substrings. |
+| [`T06LongestPrefixesWord.java`](T06LongestPrefixesWord.java) | **Problem** | Finds the longest word in an array that can be built one character at a time by other words in the array. Uses Trie DFS with backtracking to explore all valid `eow` paths. |
 
 ---
 
