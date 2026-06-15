@@ -1,5 +1,6 @@
 import java.util.*;
 
+@SuppressWarnings("unused")
 public class G01CreatingAGraph{
     static class Edge{
         int src;
