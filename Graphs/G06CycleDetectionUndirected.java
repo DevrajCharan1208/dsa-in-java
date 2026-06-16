@@ -18,13 +18,13 @@ public class G06CycleDetectionUndirected{
         }
 
         graph[0].add(new Edge(0, 1));
-        graph[0].add(new Edge(0, 2));
+        //graph[0].add(new Edge(0, 2));
         graph[0].add(new Edge(0, 3));
 
         graph[1].add(new Edge(1, 0));
         graph[1].add(new Edge(1, 2));
 
-        graph[2].add(new Edge(2, 0));
+       // graph[2].add(new Edge(2, 0));
         graph[2].add(new Edge(2, 1));
 
         graph[3].add(new Edge(3, 0));
@@ -50,8 +50,11 @@ public class G06CycleDetectionUndirected{
 
         for(int i = 0; i<graph[curr].size();i++){
             Edge e = graph[curr].get(i);
-            if(!vis[e.dest]&&detectCycleUtil(graph, vis, e.dest, curr)){
-                return true;
+
+            if(!vis[e.dest]){
+                if(!vis[e.dest]&&detectCycleUtil(graph, vis, e.dest, curr)){
+                    return true;
+                }
             }else if(vis[e.dest] && e.dest != par){
                 return true;
             }
