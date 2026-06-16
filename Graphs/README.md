@@ -10,6 +10,9 @@ This directory covers **Graph** data structures and algorithms, starting from ba
 | [`G02BFS.java`](G02BFS.java) | **Algorithm** | Implements **Breadth-First Search (BFS)** using a Queue. Visits nodes level by level. |
 | [`G03DFS.java`](G03DFS.java) | **Algorithm** | Implements **Depth-First Search (DFS)** using recursion. Explores as far as possible along each branch before backtracking. |
 | [`G04HasPath.java`](G04HasPath.java) | **Problem** | Uses DFS to determine if there exists a valid path between a `source` and a `destination` vertex. |
+| [`G05ConnectedComponents.java`](G05ConnectedComponents.java) | **Algorithm** | Adapts BFS and DFS to handle **Disconnected Graphs** by iterating over all vertices and initiating traversals for unvisited nodes. |
+| [`G06CycleDetectionUndirected.java`](G06CycleDetectionUndirected.java) | **Algorithm** | Detects cycles in an undirected graph using DFS. Tracks the `parent` node to avoid false positives from the edge we just traversed. |
+| [`G07BipartiteGraph.java`](G07BipartiteGraph.java) | **Algorithm** | Determines if a graph is **Bipartite** (can be colored with 2 colors without adjacent nodes sharing the same color) using BFS Graph Coloring. |
 
 ---
 
