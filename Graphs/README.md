@@ -13,6 +13,8 @@ This directory covers **Graph** data structures and algorithms, starting from ba
 | [`G05ConnectedComponents.java`](G05ConnectedComponents.java) | **Algorithm** | Adapts BFS and DFS to handle **Disconnected Graphs** by iterating over all vertices and initiating traversals for unvisited nodes. |
 | [`G06CycleDetectionUndirected.java`](G06CycleDetectionUndirected.java) | **Algorithm** | Detects cycles in an undirected graph using DFS. Tracks the `parent` node to avoid false positives from the edge we just traversed. |
 | [`G07BipartiteGraph.java`](G07BipartiteGraph.java) | **Algorithm** | Determines if a graph is **Bipartite** (can be colored with 2 colors without adjacent nodes sharing the same color) using BFS Graph Coloring. |
+| [`G08CycleDetectionDirected.java`](G08CycleDetectionDirected.java) | **Algorithm** | Detects cycles in a **Directed Graph** using DFS. Keeps a recursion `stack[]` array to track nodes currently in the active traversal path. |
+| [`G09TopologicalSorting.java`](G09TopologicalSorting.java) | **Algorithm** | Implements **Topological Sorting** for Directed Acyclic Graphs (DAGs) using a modified DFS and a Stack. Dependencies are pushed to the stack after all their children are visited. |
 
 ---
 
