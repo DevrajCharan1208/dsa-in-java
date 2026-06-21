@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class G14PrimsAlgo{
+    @SuppressWarnings("unused")
     static class Edge {
         int src;
         int dest;
@@ -46,7 +47,7 @@ public class G14PrimsAlgo{
         }
     }
 
-    public static void prims(ArrayList<Edge> graph[]){
+    private  static void prims(ArrayList<Edge> graph[]){
         boolean vis[] = new boolean[graph.length];
         PriorityQueue<Pair> pq = new PriorityQueue<>();
         pq.add(new Pair(0,0));
