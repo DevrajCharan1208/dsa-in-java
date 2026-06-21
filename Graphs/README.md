@@ -15,6 +15,10 @@ This directory covers **Graph** data structures and algorithms, starting from ba
 | [`G07BipartiteGraph.java`](G07BipartiteGraph.java) | **Algorithm** | Determines if a graph is **Bipartite** (can be colored with 2 colors without adjacent nodes sharing the same color) using BFS Graph Coloring. |
 | [`G08CycleDetectionDirected.java`](G08CycleDetectionDirected.java) | **Algorithm** | Detects cycles in a **Directed Graph** using DFS. Keeps a recursion `stack[]` array to track nodes currently in the active traversal path. |
 | [`G09TopologicalSorting.java`](G09TopologicalSorting.java) | **Algorithm** | Implements **Topological Sorting** for Directed Acyclic Graphs (DAGs) using a modified DFS and a Stack. Dependencies are pushed to the stack after all their children are visited. |
+| [`G10ToplogicalSortBFS.java`](G10ToplogicalSortBFS.java) | **Algorithm** | Implements **Topological Sorting using BFS (Kahn's Algorithm)**. Calculates in-degrees of all vertices and uses a Queue to process nodes with `in-degree == 0`. |
+| [`G11AllPaths.java`](G11AllPaths.java) | **Problem** | Finds **All Paths** from a source to a target node in a Directed Graph using DFS Backtracking. |
+| [`G12DjiktrasAlgo.java`](G12DjiktrasAlgo.java) | **Algorithm** | Implements **Dijkstra's Algorithm** for finding the shortest paths from a source to all other vertices. Uses a `PriorityQueue` (Greedy approach). Fails on negative weights. |
+| [`G13BellmanFordAlgo.java`](G13BellmanFordAlgo.java) | **Algorithm** | Implements the **Bellman-Ford Algorithm** for finding shortest paths. Iterates $V-1$ times to relax all edges. Can handle **negative weight edges** and detect negative weight cycles. |
 
 ---
 
