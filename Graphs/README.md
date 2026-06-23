@@ -19,6 +19,12 @@ This directory covers **Graph** data structures and algorithms, starting from ba
 | [`G11AllPaths.java`](G11AllPaths.java) | **Problem** | Finds **All Paths** from a source to a target node in a Directed Graph using DFS Backtracking. |
 | [`G12DjiktrasAlgo.java`](G12DjiktrasAlgo.java) | **Algorithm** | Implements **Dijkstra's Algorithm** for finding the shortest paths from a source to all other vertices. Uses a `PriorityQueue` (Greedy approach). Fails on negative weights. |
 | [`G13BellmanFordAlgo.java`](G13BellmanFordAlgo.java) | **Algorithm** | Implements the **Bellman-Ford Algorithm** for finding shortest paths. Iterates $V-1$ times to relax all edges. Can handle **negative weight edges** and detect negative weight cycles. |
+| [`G14PrimsAlgo.java`](G14PrimsAlgo.java) | **Algorithm** | Implements **Prim's Algorithm** for finding a Minimum Spanning Tree (MST). Uses a `PriorityQueue` to greedily select the minimum weight edge. |
+| [`G15CheapestFlights.java`](G15CheapestFlights.java) | **Problem** | Solves "Cheapest Flights Within K Stops" using a modified Dijkstra/BFS approach based on number of stops rather than total cost. |
+| [`G16ConnectingCities.java`](G16ConnectingCities.java) | **Problem** | Uses Prim's Algorithm to find the minimum cost to connect a set of cities given in an adjacency matrix. |
+| [`G17DisjointSetUnion.java`](G17DisjointSetUnion.java) | **Data Structure** | Implements **Disjoint Set Union (DSU)** with *path compression* (`find`) and *union by rank* (`union`). |
+| [`G18KruskalsAlgo.java`](G18KruskalsAlgo.java) | **Algorithm** | Implements **Kruskal's Algorithm** for MST. Sorts all edges by weight and uses DSU to prevent cycle formation. |
+| [`G19FloodFill.java`](G19FloodFill.java) | **Problem** | Standard matrix traversal using DFS to implement a "Flood Fill" (paint bucket) logic. |
 
 ---
 
